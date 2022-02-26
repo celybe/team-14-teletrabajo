@@ -3,6 +3,7 @@ function log() {
     console.log(element);
     element.classList.toggle("showed"); 
     element.classList.toggle("hidden");
+
 }
 
 async function fetchApi(e) {
@@ -36,3 +37,5 @@ function testData(data, password) {
     }
 }
   
+
+
