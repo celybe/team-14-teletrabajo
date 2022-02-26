@@ -105,10 +105,14 @@ main{
     display:grid;
     align-items: flex-start;
     flex-direction: column;
-    justify-content: flex-start;
-    
+    justify-items: center;
 }
- 
+#submit {
+    margin-top:2rem;
+    border-top:1px solid blue;
+    border-radius: 5rem;
+    width:60%;
+}
 .showed {
     opacity: 90%;
     background-color: white;
