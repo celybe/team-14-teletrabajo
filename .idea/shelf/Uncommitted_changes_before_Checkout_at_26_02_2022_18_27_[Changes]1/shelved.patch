@@ -1,0 +1,17 @@
+Index: style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto+Condensed:ital,wght@0,400;0,700;1,700&family=Roboto:wght@300;400;500;700&display=swap');\r\n@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto+Condensed:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');\r\n\r\n*{\r\n    box-sizing: border-box;\r\n    font-family: 'Roboto','sans-serif';\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\nbody{\r\n    background-color: #ececec;\r\n    padding-left: 20px;\r\n    color: #38362f;\r\n    overflow: hidden;\r\n}\r\nheader{\r\n    height: 100px;\r\n    width: 100%;\r\n    padding: 30px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n}\r\nnav{\r\n    width: 500px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n}\r\na{\r\n    color: #38362f;\r\n    text-decoration: none;\r\n}\r\n\r\n.log-in{\r\n    cursor: pointer;\r\n    border: 2px #38362f solid;\r\n    border-radius: 30px;\r\n    padding: 5px;\r\n    width: 80px;\r\n    font-size: 16px;\r\n}\r\n.log-in:hover{\r\n    background-color: #38362f;\r\n    color: whitesmoke;\r\n    transition-duration: 0.5s;\r\n}\r\nmain{\r\n    padding-left: 30px;\r\n    padding-top: 100px;\r\n    background-image: url(\"recursos/MacBook.png\");\r\n    background-repeat: no-repeat;\r\n    background-size: 800px;\r\n    background-position-x: 125%;\r\n    background-position-y: -45%;\r\n    height: 90vh;\r\n}\r\n.desc-text{\r\n    width: 400px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-bottom: 60px;\r\n}\r\n.desc-h1{\r\n    font-size: 60px;\r\n    word-spacing: 10px;\r\n    line-height: 65px;\r\n    margin-bottom: 50px;\r\n}\r\n.go-switch{\r\n    font-size: 20px;\r\n}\r\n.main-buttons{\r\n    width: 400px;\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n.main-buttons button{\r\n    cursor: pointer;\r\n    border: double 4px transparent;\r\n    border-radius: 80px;\r\n    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #d53ac0 ,#3acfd5);\r\n    background-origin: border-box;\r\n    background-clip: content-box, border-box;\r\n    width: 190px;\r\n    height: 35px;\r\n    font-size: 16px;\r\n    font-weight: 600;\r\n}\r\n.main-buttons button:hover{\r\n    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;\r\n    transition-duration: 0.5s;\r\n    width: 240px;\r\n    height: 45px;\r\n    margin-top: -5px;\r\n    }
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/style.css b/style.css
+--- a/style.css	
++++ b/style.css	
+@@ -95,4 +95,4 @@
+     width: 240px;
+     height: 45px;
+     margin-top: -5px;
+-    }
+\ No newline at end of file
++    }
