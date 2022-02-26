@@ -1,0 +1,36 @@
+Index: scripts/edit.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const API_URL = \"https://remotegoo.herokuapp.com\";\r\n\r\nlet nameUser = document.getElementById(\"fname\")\r\nlet lastnameUser = document.getElementById(\"lname\")\r\nlet emailUser = document.getElementById(\"email\")\r\nlet projectUser = document.getElementById(\"project\")\r\nlet departmentUser = document.getElementById(\"department\")\r\nlet roleUser = document.getElementById(\"role\")\r\nlet birthUser = document.getElementById(\"birth\")\r\nlet passwordUser = document.getElementById(\"password\")\r\nlet users = []\r\nlet id;\r\n\r\nlet form = document.getElementById(\"form\")\r\n\r\nfunction getUser() {\r\n    fetch(`${API_URL}/api/user`)\r\n        .then(response => response.json())\r\n        .then(data => {\r\n            console.log(data)\r\n            users = data\r\n            nameUser.value = users[0].name\r\n            lastnameUser.value = users[0].lastname\r\n            emailUser.value = users[0].email\r\n            projectUser.value = users[0].project[0].name\r\n            roleUser.value = users[0].role\r\n            departmentUser.value = users[0].department\r\n            birthUser.value = users[0].dateOfBirth\r\n            passwordUser.value = users[0].password\r\n            id = users[0].id\r\n        })\r\n        .catch(err => console.log(err))\r\n}\r\n\r\nfunction saveUser() {\r\n    const element = document.querySelector('#put-request .date-updated');\r\n    const requestOptions = {\r\n        method: 'PUT',\r\n        headers: { 'Content-Type': 'application/json' },\r\n        body: JSON.stringify({ title: 'Fetch PUT Request Example' })\r\n    };\r\n    fetch('{$API_URL}/api/user/${id}', requestOptions)\r\n        .then(response => response.json())\r\n        .then(data => element.innerHTML = data.updatedAt );\r\n}\r\n
+===================================================================
+diff --git a/scripts/edit.js b/scripts/edit.js
+--- a/scripts/edit.js	
++++ b/scripts/edit.js	
+@@ -33,13 +33,18 @@
+ }
+ 
+ function saveUser() {
+-    const element = document.querySelector('#put-request .date-updated');
+-    const requestOptions = {
+-        method: 'PUT',
+-        headers: { 'Content-Type': 'application/json' },
+-        body: JSON.stringify({ title: 'Fetch PUT Request Example' })
+-    };
+-    fetch('{$API_URL}/api/user/${id}', requestOptions)
+-        .then(response => response.json())
+-        .then(data => element.innerHTML = data.updatedAt );
++    console.log(form.get("firstName"))
++    fetch('{$API_URL}/api/user/${id}', {
++        method: "put",
++        responseType: "json",
++        headers: {
++            "Content-Type": "application/json",
++        },
++        body: JSON.stringify({
++            firstName: nameUser.value,
++            lastName: lastnameUser.value,
++            email: emailUser.value,
++            pwd: passwordUser.value,
++        }),
++    })
+ }
