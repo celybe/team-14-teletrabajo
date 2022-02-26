@@ -3,4 +3,4 @@ function log() {
     console.log(element);
     element.classList.toggle("showed"); 
     element.classList.toggle("hidden");
-}s
+}
