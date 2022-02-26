@@ -33,18 +33,19 @@ a{
     color: #38362f;
     text-decoration: none;
 }
+
 .log-in{
-    border: 0;
-    color: #38362f;
-    font-size: 16px;
-}
-.sign-in{
     cursor: pointer;
-    border: 1px #00c3ff solid;
+    border: 2px #38362f solid;
     border-radius: 30px;
     padding: 5px;
     width: 80px;
     font-size: 16px;
+}
+.log-in:hover{
+    background-color: #38362f;
+    color: whitesmoke;
+    transition-duration: 0.5s;
 }
 main{
     padding-left: 30px;
