@@ -96,3 +96,37 @@ main{
     height: 45px;
     margin-top: -5px;
     }
+
+    /* /*modal*/
+.hidden{
+    display: none;
+}
+#form {
+    display:grid;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+ 
+.showed {
+    opacity: 90%;
+    background-color: white;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    grid-template-columns: 1fr;
+    display: grid;
+    align-items: flex-start;
+    justify-items: center;
+    border-radius: 20px;
+    z-index:1;
+    font-size: clamp(0.6rem, 4vw + 0.6rem, 2.4rem);
+}
+ @media only screen and (max-width:800px) {
+    #log {
+        width:90%;
+    }
+ }
