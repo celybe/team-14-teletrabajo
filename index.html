@@ -12,22 +12,17 @@
 <body>
     <header>
         <div><img src="recursos/logo.png" alt="REMOTE GO" width="200px" height="auto"></div>
-    </header>
         <nav><a href="#">Home</a> <a href="#">Blog</a> <a href="#">About Us</a> <button class="log-in" onclick="log()">Log in</button></nav>
     </header>
     <main>
         <div id="log" class="hidden">
             <div><img src="recursos/logo.png" alt="REMOTE GO" width="200px" height="auto"></div>
-            <form method="post" id="form">
-
+            <form method="post" id="form" onSubmit="fetchApi(event)">
                    <label for="mail">Email:</label>
                    <input type="email" id="mail" name="user_mail">
-
                    <label for="password">Password:</label>
-                   <input type=""password id="password" name="user_password"></input>
-
-                    <button type=""submit id="submit" name="submit" name="submit">Enviar</button>
-
+                   <input type="password" id="password" name="user_password"></input>
+                    <button type="submit" id="submit" name="submit" name="submit">Enviar</button>
             </form>
         </div>       
         <div class="desc-text">
