@@ -10,7 +10,7 @@ async function fetchApi(e) {
     console.log('dentro');
     const email = document.getElementById("mail").value;
     const password = document.getElementById("password").value;
-    await fetch(`https://fakestoreapi.com/products`,
+    await fetch(`https://remotegoo.herokuapp.com/api/user/${email}`,
     {
         method:"GET",
         mode:"no-cors",
