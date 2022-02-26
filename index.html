@@ -6,14 +6,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/js.js"></script>
     <title>REMOTE GO</title>
 </head>
 <body>
     <header>
         <div><img src="recursos/logo.png" alt="REMOTE GO" width="200px" height="auto"></div>
-        <nav><a href="#">Home</a> <a href="#">Blog</a> <a href="#">About Us</a> <button class="log-in">Log in</button></nav>
+    </header>
+        <nav><a href="#">Home</a> <a href="#">Blog</a> <a href="#">About Us</a> <button class="log-in" onclick="log()">Log in</button></nav>
     </header>
     <main>
+        <div id="log" class="hidden">
+            <div><img src="recursos/logo.png" alt="REMOTE GO" width="200px" height="auto"></div>
+            <form method="post" id="form">
+
+                   <label for="mail">Email:</label>
+                   <input type="email" id="mail" name="user_mail">
+
+                   <label for="password">Password:</label>
+                   <input type=""password id="password" name="user_password"></input>
+
+                    <button type=""submit id="submit" name="submit" name="submit">Enviar</button>
+
+            </form>
+        </div>       
         <div class="desc-text">
             <span class="desc-h1">A Whole New Interface</span>
             <span class="rest-desc">Changing the way you communicate and work with the all new <span class="go-switch">GO Switch</span></span>
